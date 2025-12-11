@@ -73,7 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(SolutionDir)\imgui-master;$(SolutionDir)\portaudio\include;$(IncludePath)</IncludePath>
     <ExternalIncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)\imgui-master;$(SolutionDir)\portaudio\include;$(IncludePath)</ExternalIncludePath>
-    <LibraryPath>$(SolutionDir)\imgui-master;$(SolutionDir)\portaudio\include;$(IncludePath);$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(SolutionDir)\imgui-master;$(SolutionDir)\portaudio\build\msvc\x64\Debug;$(IncludePath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -126,7 +126,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);$(SolutionDir)\imgui-master;$(SolutionDir)\portaudio\include;$(IncludePath)</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);portaudio_x64.lib;$(SolutionDir)\portaudio\include;$(IncludePath)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
