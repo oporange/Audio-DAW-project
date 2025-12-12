@@ -3,14 +3,21 @@
 #include "iostream"
 
 #include "portaudio.h"
+#include "AudioFile-master/AudioFile.h"
 
+#include "Scripts/InitAndClose.h"
 #include "Scripts/WaveTestyStuff.h"
+
 
 int main()
 {
-	Pa_Initialize();
+	Init();
 
 
-	Pa_Terminate();
+	AudioFile<double> file;
+	file.load("vine-boom.wav");
+	file.printSummary();
+
+	Exit();
 	return 0;
 }

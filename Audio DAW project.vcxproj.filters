@@ -23,5 +23,8 @@
     <ClInclude Include="Scripts\WaveTestyStuff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Scripts\InitAndClose.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
