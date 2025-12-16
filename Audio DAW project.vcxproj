@@ -134,6 +134,8 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Scripts\AudioData.h" />
+    <ClInclude Include="Scripts\AudioStreams.h" />
     <ClInclude Include="Scripts\InitAndClose.h" />
     <ClInclude Include="Scripts\WaveTestyStuff.h" />
   </ItemGroup>

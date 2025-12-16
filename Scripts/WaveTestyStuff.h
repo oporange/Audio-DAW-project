@@ -20,8 +20,8 @@ static int patestCallback( // actuall stream data - processes audio waveform to 
 	(void)data;
 	for (unsigned long i = 0; i < frameCount; i++)
 	{
-		*out++ = sin(data->L) / 2; /* left */   // divide by 2 to reduce volume
-		*out++ = sin(data->R); /* right */      // twice as loud on right channel
+		*out++ = sin(data->L) / 4; /* left */   // divide by 2 to reduce volume
+		*out++ = sin(data->R) / 4; /* right */      // twice as loud on right channel
 
 		data->L += 3.6f * 0.0174533f;  //3.6 degrees to radians
 		data->R += 3.6f * 0.0174533f;  //3.6 degrees to radians
