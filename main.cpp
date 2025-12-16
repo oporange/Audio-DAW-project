@@ -5,6 +5,9 @@
 
 #include "portaudio.h"
 #include "AudioFile-master/AudioFile.h"
+#include "imgui-master/imgui.h"
+#include "imgui-master/backends/imgui_impl_sdl2.h"
+#include "imgui-master/backends/imgui_impl_opengl3.h"
 
 #include "Scripts/InitAndClose.h"
 #include "Scripts/AudioData.h"
