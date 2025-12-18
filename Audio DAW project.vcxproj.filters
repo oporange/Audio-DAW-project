@@ -26,5 +26,14 @@
     <ClInclude Include="Scripts\InitAndClose.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Scripts\AudioData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\AudioStreams.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripts\WindowManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,22 +2,42 @@
 #include "math.h"
 #include "iostream"
 #include "vector"
+#include "Windows.h"
 
 #include "portaudio.h"
+
 #include "AudioFile-master/AudioFile.h"
+
+#include "SDL.h"
+#include "SDL_opengl.h"
+#include "SDL_opengles2.h"
+
 #include "imgui-master/imgui.h"
 #include "imgui-master/backends/imgui_impl_sdl2.h"
 #include "imgui-master/backends/imgui_impl_opengl3.h"
 
 #include "Scripts/InitAndClose.h"
+#include "Scripts/WindowManager.h"
 #include "Scripts/AudioData.h"
 #include "Scripts/AudioStreams.h"
 #include "Scripts/WaveTestyStuff.h"
 
+//#undef main
 
 int main()
 {
 	Init();
+
+	SDL_Event event;
+	while (SDL_PollEvent(&event))
+	{
+	}
+
+	ImGui_ImplOpenGL3_NewFrame();
+	ImGui_ImplSDL2_NewFrame();
+	ImGui::NewFrame();
+
+	ImGui::ShowDemoWindow();
 
 
 	AudioFile<double> file;

@@ -5,6 +5,9 @@ void Init()
 	//audio stream init
 	Pa_Initialize();
 
+	//SDL INIT
+	SDL_Init(SDL_INIT_EVERYTHING);
+
 	//dear imgui init
 	// 
 	// Setup Dear ImGui context
@@ -14,9 +17,7 @@ void Init()
 	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
 	io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
-	// Setup Platform/Renderer backends
-	ImGui_ImplSDL2_InitForOpenGL(window, YOUR_SDL_GL_CONTEXT);
-	ImGui_ImplOpenGL3_Init();
+
 }
 
 void Exit()
