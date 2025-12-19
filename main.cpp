@@ -12,9 +12,15 @@
 #include "SDL_opengl.h"
 #include "SDL_opengles2.h"
 
+#ifndef IMGUI_DEFINE_MATH_OPERATORS
+#define IMGUI_DEFINE_MATH_OPERATORS
+#endif
 #include "imgui-master/imgui.h"
+#include "imgui-master/imgui.cpp"
+#include "imgui-master/backends/imgui_impl_sdl2.cpp"
+#include "imgui-master/backends/imgui_impl_opengl2.cpp"
 #include "imgui-master/backends/imgui_impl_sdl2.h"
-#include "imgui-master/backends/imgui_impl_opengl3.h"
+#include "imgui-master/backends/imgui_impl_opengl2.h"
 
 #include "Scripts/InitAndClose.h"
 #include "Scripts/WindowManager.h"
@@ -22,7 +28,7 @@
 #include "Scripts/AudioStreams.h"
 #include "Scripts/WaveTestyStuff.h"
 
-//#undef main
+#undef main
 
 int main()
 {
@@ -33,7 +39,7 @@ int main()
 	{
 	}
 
-	ImGui_ImplOpenGL3_NewFrame();
+	ImGui_ImplOpenGL2_NewFrame();
 	ImGui_ImplSDL2_NewFrame();
 	ImGui::NewFrame();
 

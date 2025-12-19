@@ -11,5 +11,5 @@ void OpenWindow()
 
 	// Setup Platform/Renderer backends
 	ImGui_ImplSDL2_InitForOpenGL(SDL_WINDOW, gl_context);
-	ImGui_ImplOpenGL3_Init();
+	ImGui_ImplOpenGL2_Init();
 }

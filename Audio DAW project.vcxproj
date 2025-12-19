@@ -73,7 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>
     </IncludePath>
-    <ExternalIncludePath>$(SolutionDir)\SDL2-3.2.26\include;$(SolutionDir)\portaudio\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath)</ExternalIncludePath>
+    <ExternalIncludePath>$(SolutionDir)\imgui-master\backends\sdlgpu3;$(SolutionDir)\imgui-master\backends;$(SolutionDir)\imgui-master;$(SolutionDir)\SDL2-3.2.26\include;$(SolutionDir)\portaudio\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);$(IncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)\SDL2-3.2.26\lib\x64;$(SolutionDir)\portaudio\build\msvc\x64\Debug;$(IncludePath);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
