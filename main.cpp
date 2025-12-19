@@ -18,9 +18,9 @@
 #include "imgui-master/imgui.h"
 #include "imgui-master/imgui.cpp"
 #include "imgui-master/backends/imgui_impl_sdl2.cpp"
-#include "imgui-master/backends/imgui_impl_opengl2.cpp"
+#include "imgui-master/backends/imgui_impl_opengl3.cpp"
 #include "imgui-master/backends/imgui_impl_sdl2.h"
-#include "imgui-master/backends/imgui_impl_opengl2.h"
+#include "imgui-master/backends/imgui_impl_opengl3.h"
 
 #include "Scripts/InitAndClose.h"
 #include "Scripts/WindowManager.h"
@@ -39,7 +39,7 @@ int main()
 	{
 	}
 
-	ImGui_ImplOpenGL2_NewFrame();
+	ImGui_ImplOpenGL3_NewFrame();
 	ImGui_ImplSDL2_NewFrame();
 	ImGui::NewFrame();
 
