@@ -8,19 +8,14 @@
 
 #include "AudioFile-master/AudioFile.h"
 
+#define IMGUI_DEFINE_MATH_OPERATORS
+#include "imgui.h"
+#include "imgui_impl_sdl2.h"
+#include "imgui_impl_opengl2.h"
+
+
 #include "SDL.h"
 #include "SDL_opengl.h"
-#include "SDL_opengles2.h"
-
-#ifndef IMGUI_DEFINE_MATH_OPERATORS
-#define IMGUI_DEFINE_MATH_OPERATORS
-#endif
-#include "imgui-master/imgui.h"
-#include "imgui-master/imgui.cpp"
-#include "imgui-master/backends/imgui_impl_sdl2.cpp"
-#include "imgui-master/backends/imgui_impl_opengl3.cpp"
-#include "imgui-master/backends/imgui_impl_sdl2.h"
-#include "imgui-master/backends/imgui_impl_opengl3.h"
 
 #include "Scripts/InitAndClose.h"
 #include "Scripts/WindowManager.h"
@@ -33,18 +28,28 @@
 int main()
 {
 	Init();
+	OpenWindow();
 
-	SDL_Event event;
-	while (SDL_PollEvent(&event))
-	{
+	while (true) {
+		SDL_Event event;
+		while (SDL_PollEvent(&event))
+		{
+			ImGui_ImplSDL2_ProcessEvent(&event);
+			if (event.type == SDL_QUIT)
+				return 0;
+		}
+
+		ImGui_ImplOpenGL2_NewFrame();
+		ImGui_ImplSDL2_NewFrame();
+		ImGui::NewFrame();
+
+		ImGui::ShowDemoWindow();
+
+		ImGui::Render();
+		glClear(GL_COLOR_BUFFER_BIT);
+		ImGui_ImplOpenGL2_RenderDrawData(ImGui::GetDrawData());
+		SDL_GL_SwapWindow(SDL_WINDOW);
 	}
-
-	ImGui_ImplOpenGL3_NewFrame();
-	ImGui_ImplSDL2_NewFrame();
-	ImGui::NewFrame();
-
-	ImGui::ShowDemoWindow();
-
 
 	AudioFile<double> file;
 	file.load("vine-boom.wav");
