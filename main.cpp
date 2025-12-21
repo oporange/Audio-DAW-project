@@ -22,6 +22,7 @@
 #include "Scripts/AudioData.h"
 #include "Scripts/AudioStreams.h"
 #include "Scripts/WaveTestyStuff.h"
+#include "Scripts/ImGui_MainWindow.h"
 
 #undef main
 
@@ -38,12 +39,14 @@ int main()
 			if (event.type == SDL_QUIT)
 				return 0;
 		}
-
+		//imgui INIT loop
 		ImGui_ImplOpenGL2_NewFrame();
 		ImGui_ImplSDL2_NewFrame();
 		ImGui::NewFrame();
+		ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
 
-		ImGui::ShowDemoWindow();
+
+		ImGui_MainWindow();
 
 		ImGui::Render();
 		glClear(GL_COLOR_BUFFER_BIT);

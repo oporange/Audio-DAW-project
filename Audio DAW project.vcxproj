@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="Scripts\AudioData.h" />
     <ClInclude Include="Scripts\AudioStreams.h" />
+    <ClInclude Include="Scripts\ImGui_MainWindow.h" />
     <ClInclude Include="Scripts\InitAndClose.h" />
     <ClInclude Include="Scripts\WaveTestyStuff.h" />
     <ClInclude Include="Scripts\WindowManager.h" />
