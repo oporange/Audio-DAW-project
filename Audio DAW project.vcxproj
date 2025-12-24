@@ -161,6 +161,7 @@
     <ClInclude Include="Scripts\InitAndClose.h" />
     <ClInclude Include="Scripts\WaveTestyStuff.h" />
     <ClInclude Include="Scripts\WindowManager.h" />
+    <ClInclude Include="Scripts\Window_Master.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

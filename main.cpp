@@ -45,8 +45,9 @@ int main()
 		ImGui::NewFrame();
 		ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport(), ImGuiDockNodeFlags_PassthruCentralNode);
 
-
+		ImGui::ShowDemoWindow(nullptr);
 		ImGui_MainWindow();
+		
 
 		ImGui::Render();
 		glClear(GL_COLOR_BUFFER_BIT);

@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Scripts/Window_Master.h"
 
 void ImGui_MainWindow() 
 {
@@ -28,8 +28,5 @@ void ImGui_MainWindow()
 	ImGui::End();
 	//End master window create
 
-    ImGui::SetNextWindowPos(ImVec2(-5, 10), ImGuiCond_Once);
-    ImGui::BeginChild("Test Window", ImVec2(0,0), 0, ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoMove);
-    ImGui::Text("Hello, world!");
-    ImGui::EndChild();
+    ImGui_Window_Master_Load();
 }
